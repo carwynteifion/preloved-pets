@@ -4,8 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preloved Pets | Home</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <header>
+        <h1>Preloved Pets</h1>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <div id="navbar">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <div id="hero">
+        <div class="overlay"></div>
+        <h1>Find your new best friend today!</h1>
+        <p>Discover the joy of adopting a pet</p>
+    </div>
+    <div class="content">
+        <div id="pet-of-the-week">
+            <h2>Pet of the Week</h2>
+            <div class="pet">
+                <img src="./assets/img/dog1.jpg" alt="Dog 1">
+                <h3>Buddy</h3>
+                <p>Buddy is a friendly and energetic dog looking for a loving home.</p>
+            </div>
+        </div>
+        <div id="donate">
+            <h2>Donate</h2>
+            <form action="FormEcho.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="amount">Donation Amount:</label>
+                <input type="number" id="amount" name="amount" required>
+                <button type="submit">Donate</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Preloved Pets. All rights reserved.</p>
+    </footer>
 </body>
 </html>

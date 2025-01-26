@@ -46,3 +46,11 @@ accessibility requirements, would be sought to measure qualitative success on th
 ### Personality and Tone
 
 ### Single Minded Message
+
+
+<!--TODO-->
+Wireframing: Lecture 8
+Personas and Scenarios: Lecture 5, 7
+Single-minded message: Like a really short elevator pitch w/ paragraph on why
+
+Reflection - not on the website, on how the assignment went
