@@ -29,12 +29,11 @@
       <p>Discover the joy of adopting a pet</p>
     </div>
     <div class="content">
-      <div id="pet-of-the-week">
-        <div
-          class="pet"
-          style="background-image: url('./assets/img/dog2.png')"
-        ></div>
-        <div class="card">
+      <div class="card" id="pet-of-the-week">
+        <div class="card-image">
+          <img src="./assets/img/dog2.png" />
+        </div>
+        <div class="card-text">
           <h2>Pet of the Week</h2>
           <h3>Buddy</h3>
           <p>
@@ -44,17 +43,22 @@
           <button>View all pets</button>
         </div>
       </div>
-      <div id="donate">
-        <h2>Donate</h2>
-        <form action="FormEcho.php" method="post">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-          <label for="amount">Donation Amount:</label>
-          <input type="number" id="amount" name="amount" required />
-          <button type="submit">Donate</button>
-        </form>
+      <div class="card" id="donate">
+        <div class="card-image">
+            <img src="./assets/img/dog1.jpg" />
+        </div>
+        <div class="card-text">
+          <h2>Donate</h2>
+          <form action="FormEcho.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+            <label for="amount">Donation Amount:</label>
+            <input type="number" id="amount" name="amount" required />
+            <button type="submit">Donate</button>
+          </form>
+        </div>
       </div>
     </div>
     <footer>
