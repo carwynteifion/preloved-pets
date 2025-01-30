@@ -1,3 +1,5 @@
+/* Basic styles */
+
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -14,6 +16,7 @@ header {
   color: white;
   padding: 10px 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 header h1 {
@@ -22,7 +25,34 @@ header h1 {
   font-family: "Pacifico", cursive;
 }
 
+.menu-icon {
+  display: block;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#menu-toggle:checked + .menu-icon + #navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #ff6600, #ff9900);
+  z-index: 1;
+}
+
+/* Navbar */
+
 #navbar {
+  display: none;
+  width: 100%;
   color: white;
 }
 
@@ -31,10 +61,12 @@ header h1 {
   padding: 0;
   margin: 0;
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #navbar ul li {
-  margin: 0 15px;
+  margin: 10px 0;
 }
 
 #navbar ul li a {
@@ -48,10 +80,12 @@ header h1 {
   color: #333;
 }
 
+/* Hero banner */
+
 #hero {
   position: relative;
   background: url("./img/hero.jpg") no-repeat center center/cover;
-  background-position: center 20%; /* Adjust this value to move the image down */
+  background-position: center 20%;
   color: white;
   text-align: center;
   padding: 100px 20px;
@@ -64,11 +98,21 @@ header h1 {
   animation: fadeInDown 1s ease-in-out;
 }
 
-#hero p {
+#hero button {
   font-size: 24px;
-  margin: 10px 0 0;
+  font-weight: bold;
   animation: fadeInUp 1s ease-in-out;
+  background-color: #ff6600;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 5px 0 0;
+  transition: background-color 0.3s, transform 0.3s;
 }
+
+/* Key Frames for hero banner */
 
 @keyframes fadeInDown {
   from {
@@ -92,6 +136,8 @@ header h1 {
   }
 }
 
+/* Main content */
+
 .content {
   display: flex;
   flex-wrap: wrap;
@@ -101,7 +147,23 @@ header h1 {
 
 #pet-of-the-week {
   flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
+
+#pet-of-the-week .card-image {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+#pet-of-the-week .card-text {
+  flex: 1;
+  margin-top: 0;
+}
+
+/* Card styles */
 
 .card {
   margin: 20px;
@@ -119,20 +181,14 @@ header h1 {
   color: #ff6600;
 }
 
-#pet-of-the-week .card-image {
-  height: 70%;
-}
-
 .card-image {
-  background-size: cover;
-  background-position: center;
   border-radius: 10px 10px 0 0;
   overflow: hidden;
   display: flex;
   align-items: flex-end;
   padding: 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;;
+  transition: transform 0.3s;
 }
 
 .card-image img {
@@ -145,7 +201,6 @@ header h1 {
 .card-text {
   background: rgba(255, 255, 255, 0.8);
   color: #333;
-  width: calc(100%-20px);
   padding: 20px;
   border-radius: 0 0 10px 10px;
 }
@@ -169,12 +224,15 @@ header h1 {
   cursor: pointer;
   margin: 10px 5px 0 0;
   transition: background-color 0.3s, transform 0.3s;
+  font-weight: bold;
 }
 
 .card button:hover {
   background-color: #cc5200;
   transform: translateY(-3px);
 }
+
+/* Donate form */
 
 #donate {
   flex: 1;
@@ -199,6 +257,8 @@ header h1 {
   margin-left: 10px;
 }
 
+/* Footer */
+
 footer {
   background: linear-gradient(90deg, #ff6600, #ff9900);
   color: white;
@@ -213,11 +273,10 @@ footer p {
 }
 
 /* Media Queries */
-@media screen and (min-width: 480px) {
-  header {
-    padding: 10px 20px;
-  }
 
+/* Tablet */
+
+@media screen and (min-width: 480px) {
   header h1 {
     font-size: 36px;
   }
@@ -232,16 +291,40 @@ footer p {
 
   #navbar ul {
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #navbar ul li {
+    margin: 10px 0;
+  }
+}
+
+/* Desktop */
+
+@media screen and (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  #navbar {
+    display: flex;
+    width: auto;
+  }
+
+  #navbar ul {
+    flex-direction: row;
+    text-align: center;
   }
 
   #navbar ul li {
     margin: 0 15px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  header {
-    padding: 10px 20px;
   }
 
   #hero {
@@ -254,9 +337,5 @@ footer p {
 
   #hero p {
     font-size: 24px;
-  }
-
-  #navbar ul {
-    text-align: center;
   }
 }

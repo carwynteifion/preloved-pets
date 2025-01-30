@@ -13,12 +13,16 @@
   <body>
     <header>
       <h1>Preloved Pets</h1>
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
       <nav id="navbar">
         <ul>
           <li>
             <a href="/"><strong>Home</strong></a>
           </li>
-          <li><a href="about.html">About Us</a></li>
+          <li><a href="our-work.html">Our Work</a></li>
+          <li><a href="adopt-a-pet.html">Adopt A Pet</a></li>
+          <li><a href="donate.html">Donate</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -26,7 +30,7 @@
     <div id="hero">
       <div class="overlay"></div>
       <h1>Find your new best friend today!</h1>
-      <p>Discover the joy of adopting a pet</p>
+      <button>Adopt A Pet</button>
     </div>
     <div class="content">
       <div class="card" id="pet-of-the-week">
@@ -34,28 +38,35 @@
           <img src="./assets/img/dog2.png" />
         </div>
         <div class="card-text">
-          <h2>Pet of the Week</h2>
+          <h2>Preloved Pet of the Week</h2>
           <h3>Buddy</h3>
           <p>
-            Buddy is a friendly and energetic dog looking for a loving home.
+            Buddy is a friendly and energetic dog who loves to play and go on long walks. He is very affectionate and enjoys being around people. Buddy is looking for a loving home where he can get plenty of exercise and attention. He is great with kids and other pets, making him the perfect addition to any family. Adopt Buddy today and experience the joy of having a loyal and loving companion by your side.
           </p>
           <button>Adopt</button>
-          <button>View all pets</button>
         </div>
       </div>
       <div class="card" id="donate">
         <div class="card-image">
-            <img src="./assets/img/dog1.jpg" />
+          <img src="./assets/img/dog1.jpg" />
         </div>
         <div class="card-text">
-          <h2>Donate</h2>
+          <h2>Support Us</h2>
           <form action="FormEcho.php" method="post">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required />
+            <input type="text" id="name" name="name" size="30" required />
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required />
-            <label for="amount">Donation Amount:</label>
-            <input type="number" id="amount" name="amount" required />
+            <input type="email" id="email" name="email" size="30" required />
+            <label for="amount">Donation Amount (£):</label>
+            <input
+              type="number"
+              id="amount"
+              name="amount"
+              min="5"
+              placeholder="5"
+              size="10"
+              required
+            />
             <button type="submit">Donate</button>
           </form>
         </div>
