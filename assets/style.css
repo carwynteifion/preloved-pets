@@ -140,9 +140,9 @@ header h1 {
 
 .content {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
   padding: 20px;
+  gap: 20px;
 }
 
 #pet-of-the-week {
@@ -166,13 +166,16 @@ header h1 {
 /* Card styles */
 
 .card {
+  flex: 1;
   margin: 20px;
   background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
   padding: 20px;
-  min-width: 200px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border: 2px solid #ff6600;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card h2 {
@@ -182,13 +185,17 @@ header h1 {
 }
 
 .card-image {
-  border-radius: 10px 10px 0 0;
   overflow: hidden;
   display: flex;
   align-items: flex-end;
   padding: 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
+  max-height: 400px;
+}
+
+.card-border {
+  border-radius: 10px 10px 0 0;
 }
 
 .card-image img {
@@ -196,12 +203,23 @@ header h1 {
   height: 100%;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
+  transition: transform 0.3s;
+  object-position: center;
+}
+
+#campaigns .card-image img {
+  height: 300px;
+  object-position: center 20%;
+}
+
+#fish img {
+  border-radius: 0;
 }
 
 .card-text {
   background: rgba(255, 255, 255, 0.8);
   color: #333;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
   border-radius: 0 0 10px 10px;
 }
 
@@ -214,7 +232,8 @@ header h1 {
   margin: 10px 0;
 }
 
-.card button {
+.card button,
+form button {
   background-color: #ff6600;
   color: white;
   padding: 10px 20px;
@@ -227,7 +246,8 @@ header h1 {
   font-weight: bold;
 }
 
-.card button:hover {
+.card button:hover,
+form button:hover {
   background-color: #cc5200;
   transform: translateY(-3px);
 }
@@ -240,21 +260,62 @@ header h1 {
 
 #donate form {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 #donate label {
   display: block;
-  margin-bottom: 10px;
   font-weight: bold;
 }
 
-#donate input {
-  width: calc(100% - 20px);
+#donate input,
+form input,
+form textarea {
+  width: 100%;
   padding: 10px;
-  margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin-left: 10px;
+}
+
+#donate input {
+  margin-bottom: 20px;
+  margin-left: 0;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+/* Form styles */
+
+form {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+}
+
+.form-group-inline {
+  display: flex;
+  gap: 30px;
+}
+
+.form-group-inline div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group-inline label,
+.form-group-inline input {
+  width: 100%;
 }
 
 /* Footer */
@@ -270,6 +331,10 @@ footer {
 
 footer p {
   margin: 0;
+}
+
+#fish {
+  display: none;
 }
 
 /* Media Queries */
@@ -297,6 +362,11 @@ footer p {
 
   #navbar ul li {
     margin: 10px 0;
+  }
+
+  .card-image img {
+    height: 300px;
+    object-position: center 20%;
   }
 }
 
@@ -337,5 +407,30 @@ footer p {
 
   #hero p {
     font-size: 24px;
+  }
+
+  .card-image img {
+    height: 400px;
+    object-position: center 50%;
+  }
+
+  /* Large Desktop */
+
+  @media screen and (min-width: 1024px) {
+    .content {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .card-image img {
+      height: auto !important;
+      object-position: center !important;
+    }
+
+    #fish {
+      display: block;
+    }
   }
 }
