@@ -9,11 +9,11 @@
       href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <header>
-      <h1>Preloved Pets</h1>
+      <h1><a href="/">Preloved Pets</a></h1>
       <input type="checkbox" id="menu-toggle" />
       <label for="menu-toggle" class="menu-icon">&#9776;</label>
       <nav id="navbar">
@@ -25,6 +25,7 @@
           <li><a href="adopt-a-pet.html">Adopt A Pet</a></li>
           <li><a href="campaigns.html">Campaigns</a></li>
           <li><a href="donate.html">Donate</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
         </ul>
       </nav>
     </header>
@@ -38,7 +39,11 @@
         <div class="card-text">
           <h2>Why Donate?</h2>
           <p>
-            Your donations help us provide medical care, food, and shelter for pets in need. Every donation, no matter how small, makes a big difference in the lives of the pets we care for. Help us continue our mission to rescue, rehabilitate, and rehome pets by making a donation today.
+            Your donations help us provide medical care, food, and shelter for
+            pets in need. Every donation, no matter how small, makes a big
+            difference in the lives of the pets we care for. Help us continue
+            our mission to rescue, rehabilitate, and rehome pets by making a
+            donation today.
           </p>
         </div>
       </div>
@@ -59,17 +64,35 @@
             <div class="form-group-inline">
               <div>
                 <label for="amount">Donation (£):</label>
-                <input type="number" id="amount" name="amount" min="5" placeholder="5" required />
+                <input
+                  type="number"
+                  id="amount"
+                  name="amount"
+                  min="5"
+                  placeholder="5"
+                  required
+                />
               </div>
               <div>
                 <label for="card-number">Card Number:</label>
-                <input type="text" id="card-number" name="card-number" required />
+                <input
+                  type="text"
+                  id="card-number"
+                  name="card-number"
+                  required
+                />
               </div>
             </div>
             <div class="form-group-inline">
               <div>
                 <label for="expiry-date">Expiry Date:</label>
-                <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required />
+                <input
+                  type="text"
+                  id="expiry-date"
+                  name="expiry-date"
+                  placeholder="MM/YY"
+                  required
+                />
               </div>
               <div>
                 <label for="cvv">CVV:</label>

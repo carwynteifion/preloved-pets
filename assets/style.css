@@ -25,6 +25,11 @@ header h1 {
   font-family: "Pacifico", cursive;
 }
 
+header h1 a {
+  color: white;
+  text-decoration: none;
+}
+
 .menu-icon {
   display: block;
   font-size: 24px;
@@ -96,6 +101,11 @@ header h1 {
   font-size: 48px;
   margin: 0;
   animation: fadeInDown 1s ease-in-out;
+}
+
+#hero p {
+  font-size: 24px;
+  animation: fadeInUp 1s ease-in-out;
 }
 
 #hero button {
@@ -232,6 +242,18 @@ header h1 {
   margin: 10px 0;
 }
 
+.card-text a {
+  color: #ff6600;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, text-decoration 0.3s;
+}
+
+.card-text a:hover {
+  color: #cc5200;
+  text-decoration: underline;
+}
+
 .card button,
 form button {
   background-color: #ff6600;
@@ -316,6 +338,40 @@ form label {
 .form-group-inline label,
 .form-group-inline input {
   width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-card-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 
 /* Footer */
@@ -433,4 +489,10 @@ footer p {
       display: block;
     }
   }
+}
+
+/* Contact page background image */
+
+.contact-bg {
+  background: url('./img/contact-bg.jpg') no-repeat center center/cover;
 }
