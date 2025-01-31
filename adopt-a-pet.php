@@ -5,7 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Preloved Pets | Adopt A Pet</title>
-	<link rel="stylesheet" href="./assets/style.css" />
+	<link rel="stylesheet" href="./assets/style.css?<?php echo time(); ?>" />
 	<link
 		href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap"
 		rel="stylesheet" />
@@ -91,17 +91,6 @@
 						?>
 					</tbody>
 				</table>
-			</div>
-		</div>
-		<div class="card">
-			<div class="card-text">
-				<h2>Adoption Process</h2>
-				<p>
-					Our adoption process is simple and straightforward. Fill out an
-					adoption application, meet with our adoption counsellors, and bring
-					your new pet home. We provide all the support and resources you need
-					to ensure a smooth transition for both you and your new pet.
-				</p>
 			</div>
 		</div>
 	</div>

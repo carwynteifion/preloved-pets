@@ -376,10 +376,10 @@ form label {
 
 /* Adoption table */
 table img {
-  width: 100px;
+  width: 200px;
   height: 100px;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 20px;
 }
 
 /* Footer */
