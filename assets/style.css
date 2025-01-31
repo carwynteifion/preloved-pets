@@ -496,3 +496,13 @@ footer p {
 .contact-bg {
   background: url('./img/contact-bg.jpg') no-repeat center center/cover;
 }
+
+/* Large and small card styles */
+
+.card-large {
+  flex: 2;
+}
+
+.card-small {
+  flex: 1;
+}
