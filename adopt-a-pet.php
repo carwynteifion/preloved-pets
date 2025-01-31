@@ -68,14 +68,16 @@
                             <td><strong>Previous Owners</strong></td>
                         </tr>
                     </thead>
-                    <tbody>
+					<tbody>
                         <?php
+                        $pets = [];
                         if ($result->num_rows > 0) {
                             // output data of each row
                             while ($row = $result->fetch_assoc()) {
+                                $pets[] = $row;
                                 echo "<tr>";
                                 echo "<td>" . $row["name"] . "</td>";
-                                echo "<td>" . $row["image"] . "</td>";
+                                echo "<td><img src='" . $row["image"] . "' alt='" . $row["name"] . "'></td>";
                                 echo "<td>" . $row["description"] . "</td>";
                                 echo "<td>" . $row["type"] . "</td>";
                                 echo "<td>" . $row["colour"] . "</td>";
@@ -92,14 +94,13 @@
                 <table class="pets mobile">
                     <tbody>
                         <?php
-                        if ($result->num_rows > 0) {
-                            // output data of each row
-                            while ($row = $result->fetch_assoc()) {
+                        if (count($pets) > 0) {
+                            foreach ($pets as $row) {
                                 echo "<tr>";
                                 echo "<td><strong>Name:</strong> " . $row["name"] . "</td>";
                                 echo "</tr>";
                                 echo "<tr>";
-								echo "<td>" . $row["image"] . "</td>";
+                                echo "<td><img src='" . $row["image"] . "' alt='" . $row["name"] . "'></td>";
                                 echo "</tr>";
                                 echo "<tr>";
                                 echo "<td><strong>Description:</strong> " . $row["description"] . "</td>";
