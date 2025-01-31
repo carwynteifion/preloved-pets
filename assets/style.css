@@ -1,5 +1,4 @@
 /* Basic styles */
-
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -8,6 +7,7 @@ body {
   color: #333;
 }
 
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -54,7 +54,6 @@ header h1 a {
 }
 
 /* Navbar */
-
 #navbar {
   display: none;
   width: 100%;
@@ -86,7 +85,6 @@ header h1 a {
 }
 
 /* Hero banner */
-
 #hero {
   position: relative;
   background: url("./img/hero.jpg") no-repeat center center/cover;
@@ -122,8 +120,7 @@ header h1 a {
   transition: background-color 0.3s, transform 0.3s;
 }
 
-/* Key Frames for hero banner */
-
+/* Keyframes for hero banner */
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -147,7 +144,6 @@ header h1 a {
 }
 
 /* Main content */
-
 .content {
   display: flex;
   flex-direction: column;
@@ -174,7 +170,6 @@ header h1 a {
 }
 
 /* Card styles */
-
 .card {
   flex: 1;
   margin: 20px;
@@ -282,9 +277,7 @@ form button:hover {
   flex: 1;
 }
 
-
 /* Donate form */
-
 #donate {
   flex: 1;
 }
@@ -320,13 +313,11 @@ form textarea {
 }
 
 /* Contact form */
-
 .contact-bg {
   background: url("./img/contact-bg.jpg") no-repeat center center/cover;
 }
 
 /* Form styles */
-
 form {
   padding: 20px;
   display: flex;
@@ -393,17 +384,18 @@ form label {
 .pets.desktop {
   display: none;
 }
+
 .pets.mobile {
   width: 100%;
   border-collapse: collapse;
 }
+
 .pets.mobile td {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
 /* Footer */
-
 footer {
   background: linear-gradient(90deg, #ff6600, #ff9900);
   color: white;
@@ -424,7 +416,6 @@ footer p {
 /* Media Queries */
 
 /* Tablet */
-
 @media screen and (min-width: 480px) {
   header h1 {
     font-size: 36px;
@@ -460,7 +451,6 @@ footer p {
 }
 
 /* Desktop */
-
 @media screen and (min-width: 768px) {
   header {
     display: flex;
@@ -507,31 +497,31 @@ footer p {
     width: 200px;
     height: 150px;
   }
+}
 
-  /* Large Desktop */
+/* Large Desktop */
+@media screen and (min-width: 1024px) {
+  .content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
 
-  @media screen and (min-width: 1024px) {
-    .content {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 20px;
-    }
+  .card-image img {
+    height: auto !important;
+    object-position: center !important;
+  }
 
-    .card-image img {
-      height: auto !important;
-      object-position: center !important;
-    }
+  #fish {
+    display: block;
+  }
 
-    #fish {
-      display: block;
-    }
+  .pets.desktop {
+    display: table;
+  }
 
-    .pets.desktop {
-      display: table;
-    }
-    .pets.mobile {
-      display: none;
-    }
+  .pets.mobile {
+    display: none;
   }
 }
