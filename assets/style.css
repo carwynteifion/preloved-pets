@@ -375,11 +375,29 @@ form label {
 }
 
 /* Adoption table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow-x: auto;
+  display: block;
+}
+
 table img {
-  width: 200px;
+  width: 100px;
   height: 100px;
   object-fit: cover;
   border-radius: 20px;
+}
+
+table th, table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #ff6600;
+  color: white;
 }
 
 /* Footer */
@@ -432,6 +450,11 @@ footer p {
     height: 300px;
     object-position: center 20%;
   }
+
+  table img {
+    width: 150px;
+    height: 100px;
+  }
 }
 
 /* Desktop */
@@ -476,6 +499,11 @@ footer p {
   .card-image img {
     height: 400px;
     object-position: center 50%;
+  }
+
+  table img {
+    width: 200px;
+    height: 150px;
   }
 
   /* Large Desktop */
