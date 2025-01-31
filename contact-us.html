@@ -14,9 +14,9 @@
   <body>
     <header>
       <h1><a href="index.html">Preloved Pets</a></h1>
-      <input type="checkbox" id="menu-toggle" />
-      <label for="menu-toggle" class="menu-icon">&#9776;</label>
-      <nav id="navbar">
+      <input type="checkbox" id="menu-toggle" aria-label="Toggle navigation menu" />
+      <label for="menu-toggle" class="menu-icon" aria-label="Menu">&#9776;</label>
+      <nav id="navbar" aria-label="Main navigation">
         <ul>
           <li><a href="index.html"><strong>Home</strong></a></li>
           <li><a href="our-work.html">Our Work</a></li>
@@ -27,9 +27,9 @@
         </ul>
       </nav>
     </header>
-    <section id="hero">
+    <section id="hero" aria-labelledby="hero-heading">
       <div class="overlay"></div>
-      <h1>Contact Us</h1>
+      <h1 id="hero-heading">Contact Us</h1>
       <p>Please use the form to get in touch about adoption, donations, or volunteering opportunities.</p>
     </section>
     <section class="content contact-bg">
@@ -39,7 +39,7 @@
             <div class="card-text">
               <h2>Contact Form</h2>
               <div class="form-container">
-                <form action="FormEcho.php" method="post">
+                <form action="FormEcho.php" method="post" aria-label="Contact Form">
                   <div class="form-group">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required />

@@ -14,9 +14,9 @@
   <body>
     <header>
       <h1><a href="index.html">Preloved Pets</a></h1>
-      <input type="checkbox" id="menu-toggle" />
-      <label for="menu-toggle" class="menu-icon">&#9776;</label>
-      <nav id="navbar">
+      <input type="checkbox" id="menu-toggle" aria-label="Toggle navigation menu" />
+      <label for="menu-toggle" class="menu-icon" aria-label="Menu">&#9776;</label>
+      <nav id="navbar" aria-label="Main navigation">
         <ul>
           <li><a href="index.html"><strong>Home</strong></a></li>
           <li><a href="our-work.html">Our Work</a></li>
@@ -27,9 +27,9 @@
         </ul>
       </nav>
     </header>
-    <div id="hero">
+    <div id="hero" aria-labelledby="hero-heading">
       <div class="overlay"></div>
-      <h1>Donate</h1>
+      <h1 id="hero-heading">Donate</h1>
       <p>Your support helps us save more lives. Donate today.</p>
     </div>
     <div class="content">
@@ -64,7 +64,7 @@
       <div class="card card-small">
         <div class="card-text">
           <h2>Donate</h2>
-          <form action="FormEcho.php" method="post">
+          <form action="FormEcho.php" method="post" aria-label="Donation Form">
             <div class="form-group-inline">
               <div>
                 <label for="name">Name:</label>

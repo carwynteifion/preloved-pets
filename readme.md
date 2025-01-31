@@ -8,6 +8,7 @@ The objectives of the site can be derived from the requirements of the client, P
 Being a small, self-funded charity, the single main goal for the website is to provide a
 human-centric platform to secure donations. Doing this provides the means for the site to
 achieve its secondary goals, which are:
+
 - To boost the success of finding homes for pets;
 - To promote volunteering opportunities;
 - To promote funding campaigns such as for building a reptile and fish facility.
@@ -32,10 +33,11 @@ Secondary goals will be achieved by including pages dedicated to each
 objective with relevant information, including forms for donating and volunteering
 opportunities. Success would be measured for each of these by recording changes to
 the following:
+
 - The frequency and variety of pets referred to the centre and ultimately adopted
-(including interest in the pet of the week)
+  (including interest in the pet of the week)
 - The amount of people applying for volunteering opportunities, and number of opportunities
-available
+  available
 - The amount and frequency of donations before, during and after funding campaigns
 
 In addition, user feedback pertaining to the website's design, in particular from users with additional
@@ -47,8 +49,8 @@ accessibility requirements, would be sought to measure qualitative success on th
 
 ### Single Minded Message
 
-
 <!--TODO-->
+
 Wireframing: Lecture 8
 Personas and Scenarios: Lecture 5, 7
 Single-minded message: Like a really short elevator pitch w/ paragraph on why

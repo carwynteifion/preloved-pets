@@ -14,13 +14,11 @@
   <body>
     <header>
       <h1><a href="index.html">Preloved Pets</a></h1>
-      <input type="checkbox" id="menu-toggle" />
-      <label for="menu-toggle" class="menu-icon">&#9776;</label>
-      <nav id="navbar">
+      <input type="checkbox" id="menu-toggle" aria-label="Toggle navigation menu" />
+      <label for="menu-toggle" class="menu-icon" aria-label="Menu">&#9776;</label>
+      <nav id="navbar" aria-label="Main navigation">
         <ul>
-          <li>
-            <a href="index.html"><strong>Home</strong></a>
-          </li>
+          <li><a href="index.html"><strong>Home</strong></a></li>
           <li><a href="our-work.html">Our Work</a></li>
           <li><a href="adopt-a-pet.php">Adopt A Pet</a></li>
           <li><a href="campaigns.html">Campaigns</a></li>
@@ -29,15 +27,15 @@
         </ul>
       </nav>
     </header>
-    <section id="hero">
+    <section id="hero" aria-labelledby="hero-heading">
       <div class="overlay"></div>
-      <h1>Our Work</h1>
+      <h1 id="hero-heading">Our Work</h1>
       <p>Learn more about what we do to help pets find loving homes.</p>
     </section>
     <section class="content">
       <article class="card">
         <div class="card-image card-border">
-          <video width="100%" height="100%" controls preload>
+          <video width="100%" height="100%" controls preload aria-label="Our Work Video">
             <source src="./assets/video/our-work.mp4" type="video/mp4" />
             <source src="./assets/video/our-work.ogg" type="video/ogg" />
             <source src="./assets/video/our-work.webm" type="video/webm" />

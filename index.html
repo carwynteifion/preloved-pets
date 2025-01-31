@@ -14,13 +14,11 @@
   <body>
     <header>
       <h1><a href="index.html">Preloved Pets</a></h1>
-      <input type="checkbox" id="menu-toggle" />
-      <label for="menu-toggle" class="menu-icon">&#9776;</label>
-      <nav id="navbar">
+      <input type="checkbox" id="menu-toggle" aria-label="Toggle navigation menu" />
+      <label for="menu-toggle" class="menu-icon" aria-label="Menu">&#9776;</label>
+      <nav id="navbar" aria-label="Main navigation">
         <ul>
-          <li>
-            <a href="index.html"><strong>Home</strong></a>
-          </li>
+          <li><a href="index.html"><strong>Home</strong></a></li>
           <li><a href="our-work.html">Our Work</a></li>
           <li><a href="adopt-a-pet.php">Adopt A Pet</a></li>
           <li><a href="campaigns.html">Campaigns</a></li>
@@ -29,15 +27,15 @@
         </ul>
       </nav>
     </header>
-    <div id="hero">
+    <div id="hero" aria-labelledby="hero-heading">
       <div class="overlay"></div>
-      <h1>Find your new best friend today!</h1>
-      <button>Adopt A Pet</button>
+      <h1 id="hero-heading">Find your new best friend today!</h1>
+      <button aria-label="Adopt A Pet">Adopt A Pet</button>
     </div>
     <div class="content">
       <div class="card" id="pet-of-the-week">
         <div class="card-image card-border">
-          <img src="./assets/img/dog2.png" />
+          <img src="./assets/img/dog2.png" alt="Pet of the Week: Buddy" />
         </div>
         <div class="card-text">
           <h2>Preloved Pet of the Week</h2>
@@ -81,11 +79,11 @@
       </div>
       <div class="card" id="donate">
         <div class="card-image card-border">
-          <img src="./assets/img/dog1.jpg" />
+          <img src="./assets/img/dog1.jpg" alt="Support Us" />
         </div>
         <div class="card-text">
           <h2>Support Us</h2>
-          <form action="FormEcho.php" method="post">
+          <form action="FormEcho.php" method="post" aria-label="Donation Form">
             <div class="form-group-inline">
               <div>
                 <label for="name">Name:</label>
