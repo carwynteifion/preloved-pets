@@ -77,7 +77,7 @@
                                 $pets[] = $row;
                                 echo "<tr>";
                                 echo "<td>" . $row["name"] . "</td>";
-                                echo "<td><img src='" . $row["image"] . "' alt='" . $row["name"] . "'></td>";
+                                echo "<td>" . $row["image"] . "</td>";
                                 echo "<td>" . $row["description"] . "</td>";
                                 echo "<td>" . $row["type"] . "</td>";
                                 echo "<td>" . $row["colour"] . "</td>";
@@ -100,7 +100,7 @@
                                 echo "<td><strong>Name:</strong> " . $row["name"] . "</td>";
                                 echo "</tr>";
                                 echo "<tr>";
-                                echo "<td><img src='" . $row["image"] . "' alt='" . $row["name"] . "'></td>";
+                                echo "<td>" . $row["image"] . "</td>";
                                 echo "</tr>";
                                 echo "<tr>";
                                 echo "<td><strong>Description:</strong> " . $row["description"] . "</td>";
