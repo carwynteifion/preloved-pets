@@ -75,12 +75,12 @@
                             while ($row = $result->fetch_assoc()) {
                                 echo "<tr>";
                                 echo "<td>" . $row["name"] . "</td>";
-                                echo "<td><img src='" . $row["image"] . "' alt='" . $row["name"] . "'></td>";
+                                echo "<td>" . $row["image"] . "</td>";
                                 echo "<td>" . $row["description"] . "</td>";
                                 echo "<td>" . $row["type"] . "</td>";
                                 echo "<td>" . $row["colour"] . "</td>";
                                 echo "<td>" . $row["arrived"] . "</td>";
-                                echo "<td>" . $row["previous_owners"] . "</td>";
+                                echo "<td>" . $row["owners"] . "</td>";
                                 echo "</tr>";
                             }
                         } else {
@@ -99,7 +99,7 @@
                                 echo "<td><strong>Name:</strong> " . $row["name"] . "</td>";
                                 echo "</tr>";
                                 echo "<tr>";
-                                echo "<td><img src='" . $row["image"] . "' alt='" . $row["name"] . "'></td>";
+								echo "<td>" . $row["image"] . "</td>";
                                 echo "</tr>";
                                 echo "<tr>";
                                 echo "<td><strong>Description:</strong> " . $row["description"] . "</td>";
@@ -114,7 +114,7 @@
                                 echo "<td><strong>Arrived:</strong> " . $row["arrived"] . "</td>";
                                 echo "</tr>";
                                 echo "<tr>";
-                                echo "<td><strong>Previous Owners:</strong> " . $row["previous_owners"] . "</td>";
+                                echo "<td><strong>Previous Owners:</strong> " . $row["owners"] . "</td>";
                                 echo "</tr>";
                             }
                         } else {
