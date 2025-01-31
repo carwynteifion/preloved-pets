@@ -23,7 +23,7 @@
 					<a href="index.html"><strong>Home</strong></a>
 				</li>
 				<li><a href="our-work.html">Our Work</a></li>
-				<li><a href="adopt-a-pet.html">Adopt A Pet</a></li>
+				<li><a href="adopt-a-pet.php">Adopt A Pet</a></li>
 				<li><a href="campaigns.html">Campaigns</a></li>
 				<li><a href="donate.html">Donate</a></li>
 				<li><a href="contact-us.html">Contact Us</a></li>
@@ -53,14 +53,10 @@
 				if (!$conn) {
 					die("Connection failed: " . mysqli_connect_error());
 				}
-				echo "Connected successfully";
-				
 				$sql = "SELECT * FROM pets ORDER BY arrived";
 				$result = $conn->query($sql);
 				?>
-
-				<table class="fiction">
-					<caption>Fiction</caption>
+				<table class="pets">
 					<thead>
 						<tr>
 							<td><strong>Name</strong></td>
@@ -72,7 +68,6 @@
 							<td><strong>Previous Owners</strong></td>
 						</tr>
 					</thead>
-
 					<tbody>
 						<?php
 						if ($result->num_rows > 0) {
@@ -92,8 +87,8 @@
 						} else {
 							echo "0 results";
 						}
+						$conn->close();
 						?>
-
 					</tbody>
 				</table>
 			</div>
