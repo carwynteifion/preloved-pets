@@ -274,6 +274,15 @@ form button:hover {
   transform: translateY(-3px);
 }
 
+.card-large {
+  flex: 2;
+}
+
+.card-small {
+  flex: 1;
+}
+
+
 /* Donate form */
 
 #donate {
@@ -308,6 +317,12 @@ form textarea {
 
 form textarea {
   resize: vertical;
+}
+
+/* Contact form */
+
+.contact-bg {
+  background: url("./img/contact-bg.jpg") no-repeat center center/cover;
 }
 
 /* Form styles */
@@ -375,29 +390,16 @@ form label {
 }
 
 /* Adoption table */
-table {
+.pets.desktop {
+  display: none;
+}
+.pets.mobile {
   width: 100%;
   border-collapse: collapse;
-  overflow-x: auto;
-  display: block;
 }
-
-table img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 20px;
-}
-
-table th, table td {
-  padding: 10px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-table th {
-  background-color: #ff6600;
-  color: white;
+.pets.mobile td {
+  border: 1px solid #ddd;
+  padding: 8px;
 }
 
 /* Footer */
@@ -524,21 +526,12 @@ footer p {
     #fish {
       display: block;
     }
+
+    .pets.desktop {
+      display: table;
+    }
+    .pets.mobile {
+      display: none;
+    }
   }
-}
-
-/* Contact page background image */
-
-.contact-bg {
-  background: url('./img/contact-bg.jpg') no-repeat center center/cover;
-}
-
-/* Large and small card styles */
-
-.card-large {
-  flex: 2;
-}
-
-.card-small {
-  flex: 1;
 }

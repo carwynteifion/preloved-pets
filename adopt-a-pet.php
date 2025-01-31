@@ -56,41 +56,73 @@
 				$sql = "SELECT * FROM pets ORDER BY arrived";
 				$result = $conn->query($sql);
 				?>
-				<table class="pets">
-					<thead>
-						<tr>
-							<td><strong>Name</strong></td>
-							<td><strong>Image</strong></td>
-							<td><strong>Description</strong></td>
-							<td><strong>Type</strong></td>
-							<td><strong>Colour</strong></td>
-							<td><strong>Arrived</strong></td>
-							<td><strong>Previous Owners</strong></td>
-						</tr>
-					</thead>
-					<tbody>
-						<?php
-						if ($result->num_rows > 0) {
-							// output data of each row
-							while ($row = $result->fetch_assoc()) {
-
-								echo ("<tr>\n");
-								echo ("<td>" . $row["name"] . "</td>");
-								echo ("<td>" . $row["image"] . "</td>");
-								echo ("<td>" . $row["description"] . "</td>");
-								echo ("<td>" . $row["type"] . "</td>");
-								echo ("<td>" . $row["colour"] . "</td>");
-								echo ("<td>" . $row["arrived"] . "</td>");
-								echo ("<td>" . $row["owners"] . "</td>");
-								echo ("</tr>\n");
-							}
-						} else {
-							echo "0 results";
-						}
-						$conn->close();
-						?>
-					</tbody>
-				</table>
+				<table class="pets desktop">
+                    <thead>
+                        <tr>
+                            <td><strong>Name</strong></td>
+                            <td><strong>Image</strong></td>
+                            <td><strong>Description</strong></td>
+                            <td><strong>Type</strong></td>
+                            <td><strong>Colour</strong></td>
+                            <td><strong>Arrived</strong></td>
+                            <td><strong>Previous Owners</strong></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        if ($result->num_rows > 0) {
+                            // output data of each row
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<tr>";
+                                echo "<td>" . $row["name"] . "</td>";
+                                echo "<td><img src='" . $row["image"] . "' alt='" . $row["name"] . "'></td>";
+                                echo "<td>" . $row["description"] . "</td>";
+                                echo "<td>" . $row["type"] . "</td>";
+                                echo "<td>" . $row["colour"] . "</td>";
+                                echo "<td>" . $row["arrived"] . "</td>";
+                                echo "<td>" . $row["previous_owners"] . "</td>";
+                                echo "</tr>";
+                            }
+                        } else {
+                            echo "<tr><td colspan='7'>No pets available</td></tr>";
+                        }
+                        ?>
+                    </tbody>
+                </table>
+                <table class="pets mobile">
+                    <tbody>
+                        <?php
+                        if ($result->num_rows > 0) {
+                            // output data of each row
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<tr>";
+                                echo "<td><strong>Name:</strong> " . $row["name"] . "</td>";
+                                echo "</tr>";
+                                echo "<tr>";
+                                echo "<td><img src='" . $row["image"] . "' alt='" . $row["name"] . "'></td>";
+                                echo "</tr>";
+                                echo "<tr>";
+                                echo "<td><strong>Description:</strong> " . $row["description"] . "</td>";
+                                echo "</tr>";
+                                echo "<tr>";
+                                echo "<td><strong>Type:</strong> " . $row["type"] . "</td>";
+                                echo "</tr>";
+                                echo "<tr>";
+                                echo "<td><strong>Colour:</strong> " . $row["colour"] . "</td>";
+                                echo "</tr>";
+                                echo "<tr>";
+                                echo "<td><strong>Arrived:</strong> " . $row["arrived"] . "</td>";
+                                echo "</tr>";
+                                echo "<tr>";
+                                echo "<td><strong>Previous Owners:</strong> " . $row["previous_owners"] . "</td>";
+                                echo "</tr>";
+                            }
+                        } else {
+                            echo "<tr><td>No pets available</td></tr>";
+                        }
+                        ?>
+                    </tbody>
+                </table>
 			</div>
 		</div>
 	</div>
