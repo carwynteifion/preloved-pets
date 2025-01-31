@@ -13,18 +13,19 @@
   </head>
   <body>
     <header>
-      <h1>Preloved Pets</h1>
+      <h1><a href="index.html">Preloved Pets</a></h1>
       <input type="checkbox" id="menu-toggle" />
       <label for="menu-toggle" class="menu-icon">&#9776;</label>
       <nav id="navbar">
         <ul>
           <li>
-            <a href="/"><strong>Home</strong></a>
+            <a href="index.html"><strong>Home</strong></a>
           </li>
           <li><a href="our-work.html">Our Work</a></li>
-          <li><a href="adopt-a-pet.html">Adopt A Pet</a></li>
+          <li><a href="adopt-a-pet.php">Adopt A Pet</a></li>
           <li><a href="campaigns.html">Campaigns</a></li>
           <li><a href="donate.html">Donate</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
         </ul>
       </nav>
     </header>
@@ -34,21 +35,37 @@
       <p>Your support helps us save more lives. Donate today.</p>
     </div>
     <div class="content">
-      <div class="card">
+      <div class="card card-large">
         <div class="card-text">
           <h2>Why Donate?</h2>
           <p>
-            Your donations help us provide medical care, food, and shelter for
-            pets in need. Every donation, no matter how small, makes a big
-            difference in the lives of the pets we care for. Help us continue
-            our mission to rescue, rehabilitate, and rehome pets by making a
-            donation today.
+            Your donations help us provide food and shelter for one of the
+            hardest times in a pet's life. Every donation, no matter how small,
+            makes a big difference in the lives of the pets we care for. Help us
+            continue our mission by making a donation today.
           </p>
+          <p>
+            There are several ways you can contribute. You can use the donation
+            form on this page to make a one-time contribution, or you can
+            <a href="contact-us.html">contact us</a> to:
+          </p>
+          <ul>
+            <li>Set up a recurring donation</li>
+            <li>Subscribe to our quarterly Supporters' Club newsletter</li>
+            <li>Leave a gift for us in your will</li>
+            <li>Donate your time by volunteering at our shelter</li>
+          </ul>
+          <h3>We accept the following modes of payment:</h3>
+          <ul>
+            <li>Credit/Debit Card</li>
+            <li>Bank Transfer</li>
+            <li>Cheque</li>
+            <li>Cash donations may only be accepted at the shelter.</li>
         </div>
       </div>
-      <div class="card">
+      <div class="card card-small">
         <div class="card-text">
-          <h2>How to Donate</h2>
+          <h2>Donate</h2>
           <form action="FormEcho.php" method="post">
             <div class="form-group-inline">
               <div>
@@ -62,7 +79,7 @@
             </div>
             <div class="form-group-inline">
               <div>
-                <label for="amount">Donation (£):</label>
+                <label for="amount">Donation (Â£):</label>
                 <input
                   type="number"
                   id="amount"

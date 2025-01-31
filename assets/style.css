@@ -282,6 +282,7 @@ form button:hover {
   flex: 1;
 }
 
+
 /* Donate form */
 
 #donate {
@@ -389,46 +390,16 @@ form label {
 }
 
 /* Adoption table */
-table.pets {
+.pets.desktop {
+  display: none;
+}
+.pets.mobile {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 20px;
 }
-
-table.pets th,
-table.pets td {
+.pets.mobile td {
   border: 1px solid #ddd;
   padding: 8px;
-  text-align: left;
-}
-
-table.pets th {
-  background-color: #f2f2f2;
-  font-weight: bold;
-}
-
-table.pets tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-table.pets tr:hover {
-  background-color: #f1f1f1;
-}
-
-table.pets.mobile td {
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-table.pets.mobile td img {
-  max-width: 100%;
-  height: auto;
-}
-
-table.pets.mobile td strong {
-  display: block;
-  margin-bottom: 5px;
 }
 
 /* Footer */
@@ -556,10 +527,10 @@ footer p {
       display: block;
     }
 
-    table.pets.desktop {
+    .pets.desktop {
       display: table;
     }
-    table.pets.mobile {
+    .pets.mobile {
       display: none;
     }
   }
