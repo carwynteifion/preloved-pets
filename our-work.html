@@ -14,12 +14,20 @@
   <body>
     <header>
       <h1><a href="index.html">Preloved Pets</a></h1>
-      <input type="checkbox" id="menu-toggle" aria-label="Toggle navigation menu" />
-      <label for="menu-toggle" class="menu-icon" aria-label="Menu">&#9776;</label>
+      <input
+        type="checkbox"
+        id="menu-toggle"
+        aria-label="Toggle navigation menu"
+      />
+      <label for="menu-toggle" class="menu-icon" aria-label="Menu"
+        >&#9776;</label
+      >
       <nav id="navbar" aria-label="Main navigation">
         <ul>
-          <li><a href="index.html"><strong>Home</strong></a></li>
-          <li><a href="our-work.html">Our Work</a></li>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li><a href="our-work.html"><strong>Our Work</strong></a></li>
           <li><a href="adopt-a-pet.php">Adopt A Pet</a></li>
           <li><a href="campaigns.html">Campaigns</a></li>
           <li><a href="donate.html">Donate</a></li>
@@ -27,60 +35,71 @@
         </ul>
       </nav>
     </header>
-    <section id="hero" aria-labelledby="hero-heading">
-      <div class="overlay"></div>
-      <h1 id="hero-heading">Our Work</h1>
-      <p>Learn more about what we do to help pets find loving homes.</p>
-    </section>
-    <section class="content">
-      <article class="card">
-        <div class="card-image card-border">
-          <video width="100%" height="100%" controls preload aria-label="Our Work Video">
-            <source src="./assets/video/our-work.mp4" type="video/mp4" />
-            <source src="./assets/video/our-work.ogg" type="video/ogg" />
-            <source src="./assets/video/our-work.webm" type="video/webm" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <div class="card-text">
-          <h2>Our Mission</h2>
-          <p>
-            At Preloved Pets, our mission is to take in pets from owners who
-            have passed away and rehome them. We provide a safe and loving
-            environment for these pets during their transition period. Our
-            dedicated team of volunteers and staff offer medical care, emotional
-            support, and training to help these pets adjust and find new, loving
-            homes.
-          </p>
-          <p>
-            We normally take in dogs and cats, but we also frequently take in
-            rodents. Our latest campaign is to raise enough money to open a new
-            wing to house reptiles and fish. If you would like to know more,
-            take a look at our <a href="campaigns.html">Campaigns</a> page.
-          </p>
-        </div>
-      </article>
-      <article class="card">
-        <div class="card-image card-border">
-          <img src="./assets/img/vet.jpg" alt="Vet Examining Dog" id="vet"/>
-        </div>
-        <div class="card-text">
-          <h2>How You Can Help</h2>
-          <p>
-            Preloved Pets is entirely self-funded, relying on donations, gifts
-            left in wills, and our supporter's club magazine. We are run by
-            unpaid volunteers, including local vets and students, who dedicate
-            their time and expertise to help us achieve our mission.
-          </p>
-          <p>
-            There are many ways you can support our work. You can <a href="adopt-a-pet.php">adopt a pet</a>,
-            <a href="contact-us.html">volunteer your time</a>, or <a href="donate.html">make a donation</a>.
-            You could even consider leaving us a monetary gift in your will. Every little bit helps and
-            makes a big difference in the lives of the pets we care for.
-          </p>
-        </div>
-      </article>
-    </section>
+    <main>
+      <div id="hero" aria-labelledby="hero-heading">
+        <div class="overlay"></div>
+        <h1 id="hero-heading">Our Work</h1>
+        <p>Learn more about what we do to help pets find loving homes.</p>
+      </div>
+      <div class="content">
+        <section class="card">
+          <div class="card-image card-border">
+            <video
+              width="100%"
+              height="100%"
+              controls
+              preload
+              aria-label="Our Work Video"
+            >
+              <source src="./assets/video/our-work.mp4" type="video/mp4" />
+              <source src="./assets/video/our-work.ogg" type="video/ogg" />
+              <source src="./assets/video/our-work.webm" type="video/webm" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="card-text">
+            <h2>Our Mission</h2>
+            <p>
+              At Preloved Pets, our mission is to take in pets from owners who
+              have passed away and rehome them. We provide a safe and loving
+              environment for these pets during their transition period. Our
+              dedicated team of volunteers and staff offer medical care,
+              emotional support, and training to help these pets adjust and find
+              new, loving homes.
+            </p>
+            <p>
+              We normally take in dogs and cats, but we also frequently take in
+              rodents. Our latest campaign is to raise enough money to open a
+              new wing to house reptiles and fish. If you would like to know
+              more, take a look at our
+              <a href="campaigns.html">Campaigns</a> page.
+            </p>
+          </div>
+        </section>
+        <section class="card">
+          <div class="card-image card-border">
+            <img src="./assets/img/vet.jpg" alt="Vet Examining Dog" id="vet" />
+          </div>
+          <div class="card-text">
+            <h2>How You Can Help</h2>
+            <p>
+              Preloved Pets is entirely self-funded, relying on donations, gifts
+              left in wills, and our supporter's club magazine. We are run by
+              unpaid volunteers, including local vets and students, who dedicate
+              their time and expertise to help us achieve our mission.
+            </p>
+            <p>
+              There are many ways you can support our work. You can
+              <a href="adopt-a-pet.php">adopt a pet</a>,
+              <a href="contact-us.html">volunteer your time</a>, or
+              <a href="donate.html">make a donation</a>. You could even consider
+              leaving us a monetary gift in your will. Every little bit helps
+              and makes a big difference in the lives of the pets we care for.
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
     <footer>
       <p>&copy; 2023 Preloved Pets. All rights reserved.</p>
     </footer>

@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preloved Pets | Home</title>
-    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="./assets/style.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
-    />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+   >
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   </head>
   <body>
     <header>
       <h1><a href="index.html">Preloved Pets</a></h1>
-      <input type="checkbox" id="menu-toggle" aria-label="Toggle navigation menu" />
-      <label for="menu-toggle" class="menu-icon" aria-label="Menu">&#9776;</label>
+      <input
+        type="checkbox"
+        id="menu-toggle"
+        aria-label="Toggle navigation menu"
+     >
+      <label for="menu-toggle" class="menu-icon" aria-label="Menu"
+        >&#9776;</label
+      >
       <nav id="navbar" aria-label="Main navigation">
         <ul>
-          <li><a href="index.html"><strong>Home</strong></a></li>
+          <li>
+            <a href="index.html"><strong>Home</strong></a>
+          </li>
           <li><a href="our-work.html">Our Work</a></li>
           <li><a href="adopt-a-pet.php">Adopt A Pet</a></li>
           <li><a href="campaigns.html">Campaigns</a></li>
@@ -27,116 +35,123 @@
         </ul>
       </nav>
     </header>
-    <div id="hero" aria-labelledby="hero-heading">
-      <div class="overlay"></div>
-      <h1 id="hero-heading">Find your new best friend today!</h1>
-      <button aria-label="Adopt A Pet">Adopt A Pet</button>
-    </div>
-    <div class="content">
-      <div class="card" id="pet-of-the-week">
-        <div class="card-image card-border">
-          <img src="./assets/img/dog2.png" alt="Pet of the Week: Buddy" />
-        </div>
-        <div class="card-text">
-          <h2>Preloved Pet of the Week</h2>
-          <h3>Buddy</h3>
-          <p>
-            Buddy is a friendly and energetic dog who loves to play and go on
-            long walks. He is very affectionate and enjoys being around people.
-          </p>
-          <p>
-            Buddy is looking for a loving home where he can get plenty of
-            exercise and attention. He is great with kids and other pets, making
-            him the perfect addition to any family.
-          </p>
-          <p>
-            Adopt Buddy today and experience the joy of having a loyal and
-            loving companion by your side.
-          </p>
-          <button>Adopt</button>
-        </div>
+    <main>
+      <div id="hero" aria-labelledby="hero-heading">
+        <div class="overlay"></div>
+        <h1 id="hero-heading">Find your new best friend today!</h1>
+        <button aria-label="Adopt A Pet">Adopt A Pet</button>
       </div>
-      <div class="card" id="campaigns">
-        <div class="card-image card-border">
-          <img src="./assets/img/iguana.jpg" alt="Campaign Iguana Image" />
-        </div>
-        <div class="card-image" id="fish">
-          <img src="./assets/img/fish.png" alt="Campaign Fish Image" />
-        </div>
-        <div class="card-text">
-          <h2>Campaign</h2>
-          <p>
-            We are running a campaign to build a new wing to accommodate
-            reptiles and fish.
-          </p>
-          <p>
-            This new facility will provide a safe and comfortable environment
-            for these pets while they wait for their forever homes.
-          </p>
-          <p>Join us in making this campaign a success!</p>
-          <button onclick="location.href='campaigns.html'">Learn More</button>
-        </div>
+      <div class="content">
+        <section class="card" id="pet-of-the-week">
+          <div class="card-image card-border">
+            <img src="./assets/img/dog2.png" alt="Pet of the Week: Buddy">
+          </div>
+          <div class="card-text">
+            <h2>Preloved Pet of the Week</h2>
+            <h3>Buddy</h3>
+            <p>
+              Buddy is a friendly and energetic dog who loves to play and go on
+              long walks. He is very affectionate and enjoys being around
+              people.
+            </p>
+            <p>
+              Buddy is looking for a loving home where he can get plenty of
+              exercise and attention. He is great with kids and other pets,
+              making him the perfect addition to any family.
+            </p>
+            <p>
+              Adopt Buddy today and experience the joy of having a loyal and
+              loving companion by your side.
+            </p>
+            <button>Adopt</button>
+          </div>
+        </section>
+        <section class="card" id="campaigns">
+          <div class="card-image card-border">
+            <img src="./assets/img/iguana.jpg" alt="Campaign Iguana Image">
+          </div>
+          <div class="card-image" id="fish">
+            <img src="./assets/img/fish.png" alt="Campaign Fish Image">
+          </div>
+          <div class="card-text">
+            <h2>Campaign</h2>
+            <p>
+              We are running a campaign to build a new wing to accommodate
+              reptiles and fish.
+            </p>
+            <p>
+              This new facility will provide a safe and comfortable environment
+              for these pets while they wait for their forever homes.
+            </p>
+            <p>Join us in making this campaign a success!</p>
+            <button onclick="location.href='campaigns.html'">Learn More</button>
+          </div>
+        </section>
+        <section class="card" id="donate">
+          <div class="card-image card-border">
+            <img src="./assets/img/dog1.jpg" alt="Support Us">
+          </div>
+          <div class="card-text">
+            <h2>Support Us</h2>
+            <form
+              action="FormEcho.php"
+              method="post"
+              aria-label="Donation Form"
+            >
+              <div class="form-group-inline">
+                <div>
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+              </div>
+              <div class="form-group-inline">
+                <div>
+                  <label for="amount">Donation (£):</label>
+                  <input
+                    type="number"
+                    id="amount"
+                    name="amount"
+                    min="5"
+                    placeholder="5"
+                    required
+                 >
+                </div>
+                <div>
+                  <label for="card-number">Card Number:</label>
+                  <input
+                    type="number"
+                    id="card-number"
+                    name="card-number"
+                    required
+                 >
+                </div>
+              </div>
+              <div class="form-group-inline">
+                <div>
+                  <label for="expiry-date">Expiry Date:</label>
+                  <input
+                    type="text"
+                    id="expiry-date"
+                    name="expiry-date"
+                    placeholder="MM/YY"
+                    required
+                 >
+                </div>
+                <div>
+                  <label for="cvv">CVV:</label>
+                  <input type="number" id="cvv" name="cvv" required>
+                </div>
+              </div>
+              <button type="submit">Donate</button>
+            </form>
+          </div>
+        </section>
       </div>
-      <div class="card" id="donate">
-        <div class="card-image card-border">
-          <img src="./assets/img/dog1.jpg" alt="Support Us" />
-        </div>
-        <div class="card-text">
-          <h2>Support Us</h2>
-          <form action="FormEcho.php" method="post" aria-label="Donation Form">
-            <div class="form-group-inline">
-              <div>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required />
-              </div>
-              <div>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required />
-              </div>
-            </div>
-            <div class="form-group-inline">
-              <div>
-                <label for="amount">Donation (£):</label>
-                <input
-                  type="number"
-                  id="amount"
-                  name="amount"
-                  min="5"
-                  placeholder="5"
-                  required
-                />
-              </div>
-              <div>
-                <label for="card-number">Card Number:</label>
-                <input
-                  type="number"
-                  id="card-number"
-                  name="card-number"
-                  required
-                />
-              </div>
-            </div>
-            <div class="form-group-inline">
-              <div>
-                <label for="expiry-date">Expiry Date:</label>
-                <input
-                  type="text"
-                  id="expiry-date"
-                  name="expiry-date"
-                  placeholder="MM/YY"
-                  required
-                />
-              </div>
-              <div>
-                <label for="cvv">CVV:</label>
-                <input type="number" id="cvv" name="cvv" required />
-              </div>
-            </div>
-            <button type="submit">Donate</button>
-          </form>
-        </div>
-      </div>
-    </div>
+    </main>
     <footer>
       <p>&copy; 2023 Preloved Pets. All rights reserved.</p>
     </footer>

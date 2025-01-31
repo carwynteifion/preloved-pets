@@ -1,123 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preloved Pets | Donate</title>
-    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="./assets/style.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
-    />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+   >
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   </head>
   <body>
     <header>
       <h1><a href="index.html">Preloved Pets</a></h1>
-      <input type="checkbox" id="menu-toggle" aria-label="Toggle navigation menu" />
+      <input type="checkbox" id="menu-toggle" aria-label="Toggle navigation menu">
       <label for="menu-toggle" class="menu-icon" aria-label="Menu">&#9776;</label>
       <nav id="navbar" aria-label="Main navigation">
         <ul>
-          <li><a href="index.html"><strong>Home</strong></a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="our-work.html">Our Work</a></li>
           <li><a href="adopt-a-pet.php">Adopt A Pet</a></li>
           <li><a href="campaigns.html">Campaigns</a></li>
-          <li><a href="donate.html">Donate</a></li>
+          <li><a href="donate.html"><strong>Donate</strong></a></li>
           <li><a href="contact-us.html">Contact Us</a></li>
         </ul>
       </nav>
     </header>
-    <div id="hero" aria-labelledby="hero-heading">
-      <div class="overlay"></div>
-      <h1 id="hero-heading">Donate</h1>
-      <p>Your support helps us save more lives. Donate today.</p>
-    </div>
-    <div class="content">
-      <div class="card card-large">
-        <div class="card-text">
-          <h2>Why Donate?</h2>
-          <p>
-            Your donations help us provide food and shelter for one of the
-            hardest times in a pet's life. Every donation, no matter how small,
-            makes a big difference in the lives of the pets we care for. Help us
-            continue our mission by making a donation today.
-          </p>
-          <p>
-            There are several ways you can contribute. You can use the donation
-            form on this page to make a one-time contribution, or you can
-            <a href="contact-us.html">contact us</a> to:
-          </p>
-          <ul>
-            <li>Set up a recurring donation</li>
-            <li>Subscribe to our quarterly Supporters' Club newsletter</li>
-            <li>Leave a gift for us in your will</li>
-            <li>Donate your time by volunteering at our shelter</li>
-          </ul>
-          <h3>We accept the following modes of payment:</h3>
-          <ul>
-            <li>Credit/Debit Card</li>
-            <li>Bank Transfer</li>
-            <li>Cheque</li>
-            <li>Cash donations may only be accepted at the shelter.</li>
-        </div>
+    <main>
+      <div id="hero" aria-labelledby="hero-heading">
+        <div class="overlay"></div>
+        <h1 id="hero-heading">Donate</h1>
+        <p>Your support helps us save more lives. Donate today.</p>
       </div>
-      <div class="card card-small">
-        <div class="card-text">
-          <h2>Donate</h2>
-          <form action="FormEcho.php" method="post" aria-label="Donation Form">
-            <div class="form-group-inline">
-              <div>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required />
+      <div class="content">
+        <section class="card card-large">
+          <div class="card-text">
+            <h2>Why Donate?</h2>
+            <p>
+              Your donations help us provide food and shelter for one of the
+              hardest times in a pet's life. Every donation, no matter how small,
+              makes a big difference in the lives of the pets we care for. Help us
+              continue our mission by making a donation today.
+            </p>
+            <p>
+              There are several ways you can contribute. You can use the donation
+              form on this page to make a one-time contribution, or you can
+              <a href="contact-us.html">contact us</a> to:
+            </p>
+            <ul>
+              <li>Set up a recurring donation</li>
+              <li>Subscribe to our quarterly Supporters' Club newsletter</li>
+              <li>Leave a gift for us in your will</li>
+              <li>Donate your time by volunteering at our shelter</li>
+            </ul>
+            <h3>We accept the following modes of payment:</h3>
+            <ul>
+              <li>Credit/Debit Card</li>
+              <li>Bank Transfer</li>
+              <li>Cheque</li>
+              <li>Cash donations may only be accepted at the shelter.</li>
+          </div>
+        </section>
+        <section class="card card-small">
+          <div class="card-text">
+            <h2>Donate</h2>
+            <form action="FormEcho.php" method="post" aria-label="Donation Form">
+              <div class="form-group-inline">
+                <div>
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
               </div>
-              <div>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required />
+              <div class="form-group-inline">
+                <div>
+                  <label for="amount">Donation (£):</label>
+                  <input
+                    type="number"
+                    id="amount"
+                    name="amount"
+                    min="5"
+                    placeholder="5"
+                    required
+                 >
+                </div>
+                <div>
+                  <label for="card-number">Card Number:</label>
+                  <input
+                    type="number"
+                    id="card-number"
+                    name="card-number"
+                    required
+                 >
+                </div>
               </div>
-            </div>
-            <div class="form-group-inline">
-              <div>
-                <label for="amount">Donation (£):</label>
-                <input
-                  type="number"
-                  id="amount"
-                  name="amount"
-                  min="5"
-                  placeholder="5"
-                  required
-                />
+              <div class="form-group-inline">
+                <div>
+                  <label for="expiry-date">Expiry Date:</label>
+                  <input
+                    type="text"
+                    id="expiry-date"
+                    name="expiry-date"
+                    placeholder="MM/YY"
+                    required
+                 >
+                </div>
+                <div>
+                  <label for="cvv">CVV:</label>
+                  <input type="number" id="cvv" name="cvv" required>
+                </div>
               </div>
-              <div>
-                <label for="card-number">Card Number:</label>
-                <input
-                  type="number"
-                  id="card-number"
-                  name="card-number"
-                  required
-                />
-              </div>
-            </div>
-            <div class="form-group-inline">
-              <div>
-                <label for="expiry-date">Expiry Date:</label>
-                <input
-                  type="text"
-                  id="expiry-date"
-                  name="expiry-date"
-                  placeholder="MM/YY"
-                  required
-                />
-              </div>
-              <div>
-                <label for="cvv">CVV:</label>
-                <input type="number" id="cvv" name="cvv" required />
-              </div>
-            </div>
-            <button type="submit">Donate</button>
-          </form>
-        </div>
+              <button type="submit">Donate</button>
+            </form>
+          </div>
+        </section>
       </div>
-    </div>
+    </main>
     <footer>
       <p>&copy; 2023 Preloved Pets. All rights reserved.</p>
     </footer>
