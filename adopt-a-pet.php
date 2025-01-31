@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preloved Pets | Adopt A Pet</title>
+    <!--Call the server to update css styling-->
     <link rel="stylesheet" href="./assets/style.css?<?php echo time(); ?>">
+    <!--Add Google Fonts and favicon-->
     <link
         href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap"
         rel="stylesheet">
@@ -15,6 +17,7 @@
 <body>
     <header>
         <h1><a href="index.html">Preloved Pets</a></h1>
+        <!--Hamburger menu for mobile-->
         <input type="checkbox" id="menu-toggle" aria-label="Toggle navigation menu">
         <label for="menu-toggle" class="menu-icon" aria-label="Menu">&#9776;</label>
         <nav id="navbar" aria-label="Main navigation">
@@ -35,6 +38,7 @@
             <p>Find your new best friend and give a pet a loving home.</p>
         </div>
         <div class="content">
+            <!--Available Pets-->
             <section class="card">
                 <div class="card-text">
                     <h2>Available Pets</h2>
@@ -44,6 +48,7 @@
                         for you. Each pet has been vaccinated, spayed or neutered, and is
                         ready to join your family.
                     </p>
+                    <!--Table to display available pets-->
                     <?php
                     include("dbinfo.inc.php");
                     $conn = mysqli_connect($servername, $username, $password, $database);
@@ -90,6 +95,7 @@
                             ?>
                         </tbody>
                     </table>
+                    <!--Table to display available pets on mobile-->
                     <table class="pets mobile" aria-label="Available Pets Table Mobile">
                         <tbody>
                             <?php
